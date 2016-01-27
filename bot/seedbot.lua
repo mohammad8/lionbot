@@ -248,175 +248,174 @@ Our channels
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [Name]
-Create a group
+!creategroup [اسم]
+ساختن گروه
 
-!createrealm [Name]
-Create a realm
+!createrealm [اسم]
+ساختن گروه برای ادمین ها
 
-!setname [Name]
-Set realm name
+!setname [اسم]
+گذاشتن اسم برای گروه
 
-!setabout [GroupID] [Text]
-Set a group's about text
+!setabout [متن] [ایدی گروه]
+گذاشتن درباره برای گروه
 
-!setrules [GroupID] [Text]
-Set a group's rules
+!setrules [متن] [ایدی گروه]
+گذاشتن قوانین برای گروه
 
-!lock [GroupID] [setting]
-Lock a group's setting
+!lock [تنظیمات] [ایدی گروه]
+قفل کردن گروه
 
-!unlock [GroupID] [setting]
-Unock a group's setting
+!unlock [تنظیمات] [ایدی گروه]
+باز کردن گروه
 
 !wholist
-Get a list of members in group/realm
+لیست افراد گروه
 
 !who
-Get a file of members in group/realm
+فایلی از افراد گروه
 
 !type
 Get group type
 
-!kill chat [GroupID]
-Kick all memebers and delete group
+!kill chat [ایدی گروه]
+پاک کردن تمام افراد گروه
 
-!kill realm [RealmID]
-Kick all members and delete realm
+!kill realm [ایدی گروه ادمین ها]
+پاک کردن تمام افراد گروه
 
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
+!addadmin [ایدی|یوزرنیم]
+ادمین کردن افراد فقط *سودو میتواند
 
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+!removeadmin [ایدی|یوزرنیم]
+پاک کردن ادمین ربات *فقط سودو میتواند
 
 !list groups
-Get a list of all groups
+لیست تمام گروه ها
 
 !list realms
-Get a list of all realms
+لیست تمام گروه های ادمین
 
 !log
-Grt a logfile of current group or realm
+لیست تمام گرو های ادمین
 
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
-Only sudo users can run this command
+ارسال متن به تمام گروه ها توجه*فقط سودو میتواند متن ارسال کند
 
-!br [group_id] [text]
+!br [متن] [ایدی گروه]
 !br 123456789 Hello !
-This command will send text to [group_id]
+ارسال متن فقط به یک گروه[ایدی گروه
+
+لطفا از علامات "/"و"!" استفاده کنید
 
 
-**U can use both "/" and "!" 
+*فقط سودو و ادمین می توانند ربات رو داخل روه ادد کنند
 
 
-*Only admins and sudo can add bots in group
+*فقط سودو و ادمین می توانند از  kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings استفاده کنند
 
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
-]],
+*فقط سودو میتواند res, setowner, استفاده کند]],
     help_text = [[
 Commands list :
 
-!kick [username|id]
-You can also do it by reply
+!kick [آیدی،کد،ریپلای]
+شخص مورد نظر از گروه اخراج ميشود
 
-!ban [ username|id]
-You can also do it by reply
+!ban [آیدی،کد،ریپلای]
+شخص مورد نظر از گروه تحریم میشود
 
-!unban [id]
-You can also do it by reply
+!unban [کد]
+شخص مورد نظر از تحریم خارج ميشود
 
 !who
-Members list
+لیست افراد گروه
 
 !modlist
-Moderators list
+لیست کمک مدیرها
 
-!promote [username]
-Promote someone
+!promote [ریپلای،یوزرنیم]
+اضافه کردن کمک مدیر
 
-!demote [username]
-Demote someone
+!demote [ریپلای،یوزرنیم]
+حذف کردن کمک مدیر
 
 !kickme
-Will kick user
+ من را پاک کن
 
 !about
-Group description
+درباره گروه
 
 !setphoto
-Set and locks group photo
+اضافه کردن وقفل عکس گروه
 
-!setname [name]
-Set group name
+!setname [نام]
+عوض کردن نام گروه
 
 !rules
-Group rules
+قوانین گروه
 
 !id
-return group id or user id
+ایدی گروه و افراد گروه
 
 !help
+کمک
+!lock [member|name|bots]
+قفل کردن :اعضا،نام،رباتها،
+!unlock [member|name|photo|bots]
+آزاد کردن :اعضا،نام،عکس،ربات
 
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
+!set rules <متن>
+گذاشتن قوانین برای گروه
 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
+!set about <متن>
+گذاشتن درباره برای گروه
 
 !settings
-Returns group settings
+تنظیمات گروه
 
 !newlink
-create/revoke your group link
+تعویض لینک و ارسال درگروه
 
 !link
-returns group link
+لینک گروه رو بده
 
 !owner
-returns group owner id
+نمایش ایدی مدیر گروه
 
-!setowner [id]
-Will set id as owner
+!setowner [ایدی]
+اضافه کردن مدیر به گروه
 
-!setflood [value]
-Set [value] as flood sensitivity
-
+!setflood [تعداد]
+محدودیت تعداد اسپم
 !stats
-Simple message statistics
+آمار در پیام ساده
 
-!save [value] <text>
-Save <text> as [value]
+!save [کلمه] <متن>
+ذخیره کلمه و جمله برگشت
 
-!get [value]
-Returns text of [value]
+!get [کلمه]
+باز گردانی جمله ای که برای کلمه ذخیره کردید
 
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+پاکسازی مدیرها/قوانین/موضوع
 
 !res [username]
-returns user id
+نشان دادن یوزر ایدی افراد
 "!res @username"
 
 !log
-will return group logs
+اطلاعات گروه
 
 !banlist
-will return group ban list
+لیست افرادی که از گروه تحریم شده اند
 
-**U can use both "/" and "!" 
 
+
+**لطفا از  علامت های "/" و "!" استفاده کنید
+
+@A1d2m3i4n_lionbot_m [ادمین وسازنده با
 
 *Only owner and mods can add bots in group
 
