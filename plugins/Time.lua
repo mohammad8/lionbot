@@ -81,11 +81,11 @@ function getformattedLocalTime(area)
 
   lat,lng,acc = get_latlong(area)
   if lat == nil and lng == nil then
-    return 'In "'..area..'" they dont have time'
+    return 'It seems that in "'..area..'" they do not have a concept of time.'
   end
   local localTime, timeZoneId = get_time(lat,lng)
 
-  return "Local: "..timeZoneId.."\nTime: ".. os.date(dateFormat,localTime) 
+  return "The local time in "..timeZoneId.." is: ".. os.date(dateFormat,localTime) 
 end
 
 function run(msg, matches)
@@ -93,8 +93,8 @@ function run(msg, matches)
 end
 
 return {
-  description = "Get Time Give by Local Name", 
-  usage = "/time (local) : view local time",
-  patterns = {"^[!/]time (.*)$"}, 
+  description = "Displays the local time in an area", 
+  usage = "!time [area]: Displays the local time in that area",
+  patterns = {"^!time (.*)$"}, 
   run = run
 }
